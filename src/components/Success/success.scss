@@ -1,0 +1,41 @@
+.success-header {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0px;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(174, 210, 34, 1) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+  
+    .stripe-icon {
+      margin-top: 0px;
+      font-size: 150px; /* Increase the font size to make the icon bigger */
+    }
+  
+    .payment-message {
+      font-size: 50px;
+      margin-top: 40px;
+      color: #070606;
+  
+      @media (max-width: 600px) {
+        font-size: 20px; /* Adjust the font size for mobile devices */
+        margin-top: 20px; /* Adjust the margin for mobile devices */
+      }
+    }
+  
+    .success-details {
+      font-size: 30px;
+      margin-top: 40px;
+      color: #070606;
+  
+      .footer {
+        font-size: 16px;
+        color: #080606;
+        margin-top: 10px;
+      }
+    }
+  }
+  
