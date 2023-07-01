@@ -16,7 +16,7 @@ const Search = ({ setShowSearch }) => {
     setQuery(e.target.value);
   };
 
-  let {data} = useFetch(`${process.env.REACT_APP_STRIPE_APP_DEV_URL}/api/products?populate=*&filters[title][$contains]=${query}`);
+  let {data} = useFetch("/api/products?populate=*&filters[title][$contains]=${query}");
 
   if(!query.length){
     data=null;
