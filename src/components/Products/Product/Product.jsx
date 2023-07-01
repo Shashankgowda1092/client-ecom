@@ -7,12 +7,13 @@ import "./Product.scss";
 
 const Product = ({ id, data}) => {
     const navigate = useNavigate();
-    return <div className="product-card"
+    
+    return( <div className="product-card"
                 onClick={()=> navigate("/product/" + id)}
                 >
                 <div className="thumbnail">
                     <img src={
-                        process.env.REACT_APP_STRIPE_APP_DEV_URL +
+                        
                         data.img.data[0].attributes.url
                     } alt="" />
                 </div>
@@ -20,7 +21,7 @@ const Product = ({ id, data}) => {
                     <span className="name">{data.title}</span>
                     <span className="price">&#8377;{data.price}</span>
                 </div>
-    </div>;
+    </div>);
 };
 
 export default Product;
