@@ -5,11 +5,13 @@ import { Context } from "../../utils/context";
 import CartItem from "./CartItem/CartItem";
 import { loadStripe } from "@stripe/stripe-js";
 import { makePaymentRequest } from "../../utils/api";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import "./Cart.scss";
 
 const Cart = () => {
     const { cartItems, setShowCart, cartSubTotal } = useContext(Context);
+    const navigate = useNavigate();;
     const stripePromise = loadStripe(
         process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY
     );
@@ -56,7 +58,7 @@ const Cart = () => {
                     <div className="empty-cart">
                         <BsCartX />
                         <span>No products in the cart.</span>
-                        <button className="return-cta" onClick={() => {}}>
+                        <button className="return-cta" onClick={() => navigate("/")}>
                             RETURN TO SHOP
                         </button>
                     </div>
