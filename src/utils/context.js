@@ -9,6 +9,8 @@ const AppContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [cartSubTotal, setCartSubTotal] = useState(0);
+  const [showMessage, setShowMessage] = useState(false);
+
   const location = useLocation();
 
   useEffect(() => {
@@ -71,6 +73,8 @@ const AppContext = ({ children }) => {
         handleAddtoCart,
         handleRemoveFromCart,
         handleCartProductQuantity,
+        showMessage,
+        setShowMessage,
       }}
     >
       {children}
