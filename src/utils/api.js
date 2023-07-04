@@ -27,7 +27,7 @@ export const fetchDataFromApi = async (url) => {
 };
 
 
-
+// console.log(process.env.REACT_APP_STRIPE_APP_DEV_URL, process.env.REACT_APP_STRIPE_APP_KEY);
 
 
 
